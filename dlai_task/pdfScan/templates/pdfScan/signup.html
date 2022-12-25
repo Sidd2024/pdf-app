@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center><h3>Register</h3><br><br>
+        <hr>
+        <br><br>
+        <form action="{% url 'signup' %}" method="post">
+            {% csrf_token %}
+            {{ form.username }}<br><br>
+            {{ form.email }}<br><br>
+            {{ form.password }}<br><br>
+            {{ form.confirm_pass }}<br><br>
+        <br>
+        <input class="btn btn-primary text-nowrap text-uppercase fw-bold text-end" type="submit" value="Create Account"><br><br>
+        </form>
+    </center>
+    
+</body>
+</html>

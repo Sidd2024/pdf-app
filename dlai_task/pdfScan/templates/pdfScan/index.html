@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if request.user.isauthenticated %}
+    <center><h1>hello, user!</h1>
+        <br><br>
+        <button>Upload pdf</button>
+        <br>
+    </center>
+    {% else %}
+    <center><h3><a href="{% url 'signin' %}">Log In-></a></h3></center>
+    <center><h3></h3><a href="{% url 'signup' %}">Register-></a></h3></center>
+    {% endif %}
+    
+</body>
+</html>
